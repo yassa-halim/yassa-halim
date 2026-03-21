@@ -1,169 +1,301 @@
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                        🎨  YASSA HALIM  —  GitHub Profile            -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0c10,25:161b22,50:1f6feb,75:58a6ff,100:79c0ff&height=220&section=header&text=Yassa%20Halim&fontSize=64&fontColor=f0f6fc&fontAlignY=34&desc=Mobile%20Engineer%20%E2%80%A2%20Flutter%20Craftsman%20%E2%80%A2%20UI%20Perfectionist&descAlignY=58&descSize=18&animation=fadeIn" />
+
+<!-- ─────────────────────── TYPING ANIMATION ─────────────────────── -->
+
 <div align="center">
-
-<!-- HEADER WAVE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a1a,50:0d2137,100:00d4ff&height=200&section=header&text=Yassa%20Halim&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Flutter%20%7C%20Mobile%20Engineer&descAlignY=60&descSize=20&animation=fadeIn" />
-
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=70&lines=%3E+Building+pixel-perfect+experiences+%F0%9F%8E%AF;%3E+Transforming+ideas+into+beautiful+apps+%F0%9F%9A%80;%3E+Clean+code+is+not+optional%2C+it's+a+lifestyle+%E2%9C%A8;%3E+One+widget+at+a+time...+%F0%9F%92%99" alt="Typing SVG" />
+  </a>
 </div>
 
 <br>
 
-<!-- TYPING SVG -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                           ABOUT ME SECTION                            -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&width=600&lines=Building+pixel-perfect+experiences+%F0%9F%8E%AF;Flutter+%26+Dart+Specialist+%F0%9F%93%B1;Clean+Architecture+Advocate+%F0%9F%8F%97%EF%B8%8F;One+widget+at+a+time...+%E2%9C%A8" alt="Typing SVG" />
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 </div>
 
-<br>
-
----
+## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> &nbsp;Who Am I?
 
 <table align="center" width="100%">
 <tr>
-<td width="55%" valign="top">
 
-### 👨‍💻 &nbsp;About Me
+<td width="50%" valign="top">
 
 ```dart
 class YassaHalim extends FlutterDeveloper {
 
-  final String name    = "Yassa Halim";
-  final String role    = "Mobile Engineer";
-  final String focus   = "Flutter & Dart";
-  final String arch    = "Clean Architecture";
+  final name       = "Yassa Halim";
+  final title      = "Mobile Engineer";
+  final location   = "Egypt 🇪🇬";
 
-  final List<String> passions = [
-    "Pixel-perfect UI",
-    "Scalable Code",
-    "Great UX",
+  final core = [
+    "Flutter", "Dart",
+  ];
+
+  final architecture = [
+    "Clean Architecture",
+    "MVVM", "BLoC Pattern",
+  ];
+
+  final passions = [
+    "Pixel-Perfect UI 🎨",
+    "Scalable Systems 🏗️",
+    "Beautiful UX ✨",
   ];
 
   String get motto =>
-    "One widget at a time ✨";
+    "Code is poetry written for humans 📝";
 }
 ```
 
 </td>
-<td width="45%" valign="top" align="center">
+
+<td width="50%" valign="top" align="center">
 
 <br>
 
-**🎯 Current Focus**
+<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="300" alt="coding animation"/>
 
-🔭 &nbsp;Building scalable Flutter apps  
-🌱 &nbsp;Exploring CI/CD & Automated Testing  
-⚡ &nbsp;Obsessed with Clean Architecture  
-💡 &nbsp;Always learning, always shipping  
+<br><br>
 
-<br>
-
-[![Profile Views](https://visitcount.itsvg.in/api?id=yassa-halim&label=Profile%20Views&color=0&icon=0&pretty=true)](https://visitcount.itsvg.in)
+<img src="https://komarev.com/ghpvc/?username=yassa-halim&label=Profile+Views&color=1f6feb&style=for-the-badge" alt="profile views"/>
 
 </td>
+
 </tr>
 </table>
 
----
-
-## 🛠️ &nbsp;Tech Arsenal
+<!-- ─────────────────────── CURRENT STATUS ─────────────────────── -->
 
 <div align="center">
 
-**Core**
-
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
-
-**State Management & Architecture**
-
-![BLoC](https://img.shields.io/badge/BLoC-blue?style=for-the-badge&logo=flutter&logoColor=white)
-![Riverpod](https://img.shields.io/badge/Riverpod-%230175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-darkgreen?style=for-the-badge&logo=buffer&logoColor=white)
-![MVVM](https://img.shields.io/badge/MVVM-purple?style=for-the-badge&logo=buffer&logoColor=white)
-
-**Backend & Storage**
-
-![Firebase](https://img.shields.io/badge/Firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-![SQLite](https://img.shields.io/badge/SQLite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Tools & DevOps**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![GitLab](https://img.shields.io/badge/GitLab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
-![Sentry](https://img.shields.io/badge/Sentry-%23362D59.svg?style=for-the-badge&logo=sentry&logoColor=white)
-
-**Design**
-
-![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6)
+| 🔭 Building | 🌱 Learning | ⚡ Obsessed With | 💬 Ask Me About |
+|:---:|:---:|:---:|:---:|
+| Scalable Flutter Apps | CI/CD & Automation | Clean Architecture | Flutter & Dart |
 
 </div>
 
----
-
-## 📊 &nbsp;GitHub Analytics
+<br>
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=yassa-halim&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true"/>
-  &nbsp;&nbsp;
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yassa-halim&layout=compact&theme=tokyonight&hide_border=true&count_private=true"/>
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 </div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                          TECH STACK SECTION                           -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="28"> &nbsp;Tech Arsenal
 
 <div align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=yassa-halim&theme=tokyonight&hide_border=true" />
+
+<!-- CORE -->
+<details open>
+<summary><b>💎 Core</b></summary>
+<br>
+<img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter"/>
+<img src="https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android"/>
+<img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" alt="iOS"/>
+</details>
+
+<!-- STATE MANAGEMENT -->
+<details open>
+<summary><b>🧩 State Management & Patterns</b></summary>
+<br>
+<img src="https://img.shields.io/badge/BLoC-0553B1?style=for-the-badge&logo=flutter&logoColor=white" alt="BLoC"/>
+<img src="https://img.shields.io/badge/Riverpod-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Riverpod"/>
+<img src="https://img.shields.io/badge/Clean_Architecture-16A34A?style=for-the-badge&logo=buffer&logoColor=white" alt="Clean Architecture"/>
+<img src="https://img.shields.io/badge/MVVM-7C3AED?style=for-the-badge&logo=buffer&logoColor=white" alt="MVVM"/>
+</details>
+
+<!-- BACKEND -->
+<details open>
+<summary><b>☁️ Backend & Cloud</b></summary>
+<br>
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"/>
+<img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+<img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"/>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=FF9900" alt="AWS"/>
+</details>
+
+<!-- TOOLS -->
+<details open>
+<summary><b>🔧 Tools & DevOps</b></summary>
+<br>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+<img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman"/>
+<img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira"/>
+<img src="https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=white" alt="Sentry"/>
+</details>
+
+<!-- DESIGN -->
+<details open>
+<summary><b>🎨 Design</b></summary>
+<br>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+<img src="https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=Adobe-XD&logoColor=white" alt="Adobe XD"/>
+</details>
+
 </div>
 
----
-
-## 🏆 &nbsp;GitHub Trophies
+<br>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=yassa-halim&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&row=1" />
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 </div>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         GITHUB STATS SECTION                          -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30"> &nbsp;GitHub Analytics
+
+<div align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=yassa-halim&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=58a6ff&icon_color=1f6feb&text_color=c9d1d9&ring_color=58a6ff" alt="GitHub Stats"/>
+  &nbsp;
+  <img width="42%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yassa-halim&layout=compact&theme=github_dark&hide_border=true&count_private=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages"/>
+</div>
+
+<br>
+
+<div align="center">
+  <img width="70%" src="https://nirzak-streak-stats.vercel.app/?user=yassa-halim&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak"/>
+</div>
+
+<br>
+
+<!-- ACTIVITY GRAPH -->
+<div align="center">
+  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=yassa-halim&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff&area=true&area_color=1f6feb&hide_border=true&custom_title=📈%20Contribution%20Graph" alt="Activity Graph"/>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                          TROPHIES SECTION                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## 🏆 &nbsp;Achievement Showcase
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=yassa-halim&theme=algolia&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7" alt="Trophies"/>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                        TOP REPOS SECTION                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
 ## 🔝 &nbsp;Top Contributed Repos
 
 <div align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=yassa-halim&limit=5&theme=tokyonight&combine_all_yearly_contributions=true&hide_border=true" />
-</div>
-
----
-
-## 💬 &nbsp;Dev Quote of the Day
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</div>
-
----
-
-## 🌐 &nbsp;Let's Connect
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yassa-halim/)
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/YassaHalim15/)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/yassa_halim)
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yassa_halim)
-[![Behance](https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white)](https://behance.net/YassaHalim)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yassahalim18@gmail.com)
-
+  <img src="https://github-contributor-stats.vercel.app/api?username=yassa-halim&limit=5&theme=algolia&combine_all_yearly_contributions=true&hide_border=true" alt="Top Contributed Repos"/>
 </div>
 
 <br>
 
-<!-- FOOTER WAVE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:0d2137,100:0a0a1a&height=120&section=footer&animation=fadeIn" />
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                          SNAKE ANIMATION                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## 🐍 &nbsp;Contribution Snake
 
 <div align="center">
-  <sub>
-    <i>"Building pixel-perfect experiences, one widget at a time." ✨</i>
-  </sub>
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                          DEV QUOTE SECTION                            -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## 💭 &nbsp;Dev Wisdom
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&border=true" alt="Dev Quote"/>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         CONNECT SECTION                               -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> &nbsp;Let's Build Something Together
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/yassa-halim/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="mailto:yassahalim18@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+</a>
+&nbsp;
+<a href="https://www.facebook.com/YassaHalim15/" target="_blank">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
+</a>
+&nbsp;
+<a href="https://instagram.com/yassa_halim" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+</a>
+&nbsp;
+<a href="https://discord.gg/yassa_halim" target="_blank">
+  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
+</a>
+&nbsp;
+<a href="https://behance.net/YassaHalim" target="_blank">
+  <img src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" alt="Behance"/>
+</a>
+
+</div>
+
+<br><br>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                          FOOTER SECTION                               -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:79c0ff,25:58a6ff,50:1f6feb,75:161b22,100:0b0c10&height=130&section=footer&animation=fadeIn" width="100%"/>
+</div>
+
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=4000&pause=2000&color=58A6FF&center=true&vCenter=true&width=500&lines=%E2%9C%A8+%22Building+pixel-perfect+experiences%2C+one+widget+at+a+time.%22+%E2%9C%A8" alt="Footer"/>
 </div>
