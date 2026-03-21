@@ -3,6 +3,13 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:00b4d8,50:0077b6,100:023e8a&height=300&text=YASSA%20HALIM&fontSize=80&fontColor=caf0f8&fontAlignY=40&desc=%E2%9A%A1%20Flutter%20Artisan%20%E2%80%A2%20Mobile%20Engineer%20%E2%80%A2%20UI%20Perfectionist%20%E2%9A%A1&descAlignY=62&descSize=18&descColor=90e0ef&animation=twinkling&stroke=00b4d8&strokeWidth=2" alt="Yassa Halim header" loading="lazy" />
+## 📚 Table of Contents
+- [About Me](#who-am-i)
+- [Tech Stack](#tech-arsenal)
+- [Project Showcase](#project-showcase)
+- [Certificates & Awards](#certificates)
+- [GitHub Stats](#github-analytics)
+- [Contact](#lets-build-something-together)
 
 <!-- ─────────────────────── TYPING ANIMATION ─────────────────────── -->
 
@@ -17,6 +24,10 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!--                           ABOUT ME SECTION                            -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/yassa-halim/profile-pic/main/profile.png" width="200" alt="Yassa Halim profile picture" loading="lazy"/>
+</div>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700" alt="Animated showcase" loading="lazy">
@@ -151,6 +162,18 @@ class YassaHalim extends FlutterDeveloper {
 
 </div>
 
+## 🛠️ Tech Stack
+<div align="center">
+  <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
+  <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" alt="iOS" />
+  <img src="https://img.shields.io/badge/BLoC-0553B1?style=for-the-badge&logo=flutter&logoColor=white" alt="BLoC" />
+  <img src="https://img.shields.io/badge/Riverpod-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Riverpod" />
+  <img src="https://img.shields.io/badge/Clean%20Architecture-16A34A?style=for-the-badge&logo=buffer&logoColor=white" alt="Clean Architecture" />
+  <img src="https://img.shields.io/badge/MVVM-7C3AED?style=for-the-badge&logo=buffer&logoColor=white" alt="MVVM" />
+</div>
+
 <br>
 
 <div align="center">
@@ -197,7 +220,16 @@ class YassaHalim extends FlutterDeveloper {
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=yassa-halim&theme=algolia&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7" alt="Trophies"/>
 </div>
+## 🚀 Project Showcase
+<div align="center">
+  <a href="https://github.com/yassa-halim/project1"><img src="https://raw.githubusercontent.com/yassa-halim/project1/main/preview.png" width="300" alt="Project 1" loading="lazy"/></a>
+  <p><strong>Project 1</strong> – وصف مختصر للمشروع.</p>
+</div>
 
+<div align="center">
+  <a href="https://github.com/yassa-halim/project2"><img src="https://raw.githubusercontent.com/yassa-halim/project2/main/preview.png" width="300" alt="Project 2" loading="lazy"/></a>
+  <p><strong>Project 2</strong> – وصف مختصر للمشروع.</p>
+</div>
 <br>
 
 <div align="center">
@@ -207,7 +239,21 @@ class YassaHalim extends FlutterDeveloper {
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!--                        TOP REPOS SECTION                              -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
+## 🏅 Certificates & Awards
+<div align="center">
+  <img src="https://img.shields.io/badge/Coursera%20Flutter%20Specialization-00B4D8?style=for-the-badge" alt="Coursera Flutter" />
+  <img src="https://img.shields.io/badge/Google%20Associate%20Android%20Developer-00B4D8?style=for-the-badge" alt="Google Android" />
+</div>
 
+## 📞 Contact
+<div align="center">
+  <a href="https://github.com/yassa-halim" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://linkedin.com/in/yassa-halim" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:yassa@example.com" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</div>
+
+## 📄 Resume
+[![Resume](https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge)](https://github.com/yassa-halim/yassa-halim/blob/main/Resume.pdf)
 ## 🔝 &nbsp;Top Contributed Repos
 
 <div align="center">
