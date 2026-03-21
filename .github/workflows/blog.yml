@@ -1,0 +1,20 @@
+name: Update README with Latest Blog Posts
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # يتم التحديث كل يوم منتصف الليل (UTC)
+  workflow_dispatch: # للسماح بتشغيل السكريبت يدوياً من واجهة GitHub
+
+jobs:
+  update-readme-with-blog:
+    name: Fetch and update blog posts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Fetch Latest Blog Posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://dev.to/feed/yassa-halim" # ⚠️ استبدل هذا الرابط برابط الـ RSS الخاص بمدونتك
