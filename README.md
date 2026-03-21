@@ -2,7 +2,7 @@
 <!--                        🎨  YASSA HALIM  —  GitHub Profile            -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0c10,25:161b22,50:1f6feb,75:58a6ff,100:79c0ff&height=220&section=header&text=Yassa%20Halim&fontSize=64&fontColor=f0f6fc&fontAlignY=34&desc=Mobile%20Engineer%20%E2%80%A2%20Flutter%20Craftsman%20%E2%80%A2%20UI%20Perfectionist&descAlignY=58&descSize=18&animation=fadeIn" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:00b4d8,50:0077b6,100:023e8a&height=300&text=YASSA%20HALIM&fontSize=80&fontColor=caf0f8&fontAlignY=40&desc=%E2%9A%A1%20Flutter%20Artisan%20%E2%80%A2%20Mobile%20Engineer%20%E2%80%A2%20UI%20Perfectionist%20%E2%9A%A1&descAlignY=62&descSize=18&descColor=90e0ef&animation=twinkling&stroke=00b4d8&strokeWidth=2" alt="Yassa Halim header" loading="lazy" />
 
 <!-- ─────────────────────── TYPING ANIMATION ─────────────────────── -->
 
@@ -19,7 +19,7 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700" alt="Animated showcase" loading="lazy">
 </div>
 
 ## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> &nbsp;Who Am I?
@@ -227,7 +227,11 @@ class YassaHalim extends FlutterDeveloper {
 ## 🐍 &nbsp;Contribution Snake
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+  <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="GitHub contribution snake animation" loading="lazy" />
+</picture>
 </div>
 
 <br>
