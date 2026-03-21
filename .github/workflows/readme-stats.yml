@@ -27,7 +27,9 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Action"
-          git add stats.svg top-langs.svg trophies.svg
+          [ -f stats.svg ] && git add stats.svg || true
+          [ -f top-langs.svg ] && git add top-langs.svg || true
+          [ -f trophies.svg ] && git add trophies.svg || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
