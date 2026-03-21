@@ -3,21 +3,26 @@ name: Update README Stats
   schedule:
     - cron: 0 0 * * * # every day at midnight UTC
   workflow_dispatch: null
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
       - name: Generate GitHub Stats
         run: |
-          set -e
-          curl -f -s --retry 3 --retry-delay 2 "https://github-readme-stats.vercel.app/api?username=yassa-halim&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=58a6ff&icon_color=1f6feb&text_color=c9d1d9&ring_color=58a6ff" > stats.svg
-          curl -f -s --retry 3 --retry-delay 2 "https://github-readme-stats.vercel.app/api/top-langs/?username=yassa-halim&layout=compact&theme=github_dark&hide_border=true&count_private=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" > top-langs.svg
-          curl -f -s --retry 3 --retry-delay 2 "https://github-profile-trophy.vercel.app/?username=yassa-halim&theme=algolia&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7" > trophies.svg
+          # Download to temporary files and ignore errors
+          curl -f -s --retry 3 --retry-delay 2 "https://github-readme-stats.vercel.app/api?username=yassa-halim&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=58a6ff&icon_color=1f6feb&text_color=c9d1d9&ring_color=58a6ff" > temp_stats.svg || echo "Stats API returned an error"
+          curl -f -s --retry 3 --retry-delay 2 "https://github-readme-stats.vercel.app/api/top-langs/?username=yassa-halim&layout=compact&theme=github_dark&hide_border=true&count_private=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" > temp_top-langs.svg || echo "Top-langs API returned an error"
+          curl -f -s --retry 3 --retry-delay 2 "https://github-profile-trophy.vercel.app/?username=yassa-halim&theme=algolia&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7" > temp_trophies.svg || echo "Trophies API returned an error"
+          
+          # Only replace old SVGs with new ones if they are successfully downloaded and not empty
+          [ -s temp_stats.svg ] && mv temp_stats.svg stats.svg || true
+          [ -s temp_top-langs.svg ] && mv temp_top-langs.svg top-langs.svg || true
+          [ -s temp_trophies.svg ] && mv temp_trophies.svg trophies.svg || true
       - name: Commit and push changes
         run: |
           git config --global user.email "actions@github.com"
