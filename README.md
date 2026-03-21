@@ -161,25 +161,6 @@ class YassaHalim extends FlutterDeveloper {
 
 </div>
 
-## 🛠️ Tech Stack
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
-  <img src="https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
-  <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" alt="iOS" />
-  <img src="https://img.shields.io/badge/BLoC-0553B1?style=for-the-badge&logo=flutter&logoColor=white" alt="BLoC" />
-  <img src="https://img.shields.io/badge/Riverpod-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Riverpod" />
-  <img src="https://img.shields.io/badge/Clean%20Architecture-16A34A?style=for-the-badge&logo=buffer&logoColor=white" alt="Clean Architecture" />
-  <img src="https://img.shields.io/badge/MVVM-7C3AED?style=for-the-badge&logo=buffer&logoColor=white" alt="MVVM" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
-</div>
-
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!--                         GITHUB STATS SECTION                          -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
@@ -187,9 +168,9 @@ class YassaHalim extends FlutterDeveloper {
 ## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30"> &nbsp;GitHub Analytics
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=yassa-halim&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=58a6ff&icon_color=1f6feb&text_color=c9d1d9&ring_color=58a6ff" alt="GitHub Stats"/>
+  <img width="49%" src="stats.svg" alt="GitHub Stats"/>
   &nbsp;
-  <img width="42%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yassa-halim&layout=compact&theme=github_dark&hide_border=true&count_private=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages"/>
+  <img width="42%" src="top-langs.svg" alt="Top Languages"/>
 </div>
 
 <br>
@@ -218,23 +199,41 @@ class YassaHalim extends FlutterDeveloper {
 ## 🏆 &nbsp;Achievement Showcase
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=yassa-halim&theme=algolia&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7" alt="Trophies"/>
-</div>
-## 🚀 Project Showcase
-<div align="center">
-  <a href="https://github.com/yassa-halim/project1"><img src="https://raw.githubusercontent.com/yassa-halim/project1/main/preview.png" width="300" alt="Project 1" loading="lazy"/></a>
-  <p><strong>Project 1</strong> – وصف مختصر للمشروع.</p>
+  <img src="trophies.svg" alt="Trophies"/>
 </div>
 
-<div align="center">
-  <a href="https://github.com/yassa-halim/project2"><img src="https://raw.githubusercontent.com/yassa-halim/project2/main/preview.png" width="300" alt="Project 2" loading="lazy"/></a>
-  <p><strong>Project 2</strong> – وصف مختصر للمشروع.</p>
-</div>
+<br>
+
+## 🚀 Project Showcase
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/yassa-halim/project1"><img src="https://raw.githubusercontent.com/yassa-halim/project1/main/preview.png" width="100%" alt="Project 1" loading="lazy" style="border-radius: 10px;"/></a>
+      <br><br><strong>✨ Project 1</strong><br><i>تطبيق فلاتر مبني باستخدام Clean Architecture.</i>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/yassa-halim/project2"><img src="https://raw.githubusercontent.com/yassa-halim/project2/main/preview.png" width="100%" alt="Project 2" loading="lazy" style="border-radius: 10px;"/></a>
+      <br><br><strong>🚀 Project 2</strong><br><i>تطبيق عالي الأداء مع تصميم (Pixel-Perfect UI).</i>
+    </td>
+  </tr>
+</table>
 <br>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 </div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                          BLOG POSTS SECTION                           -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+## ✍️ Recent Blog Posts
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+<br>
 
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!--                        TOP REPOS SECTION                              -->
@@ -252,7 +251,7 @@ class YassaHalim extends FlutterDeveloper {
 <div align="center">
   <a href="https://github.com/yassa-halim" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://linkedin.com/in/yassa-halim" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:yassa@example.com" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:yassahalim18@gmail.com" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </div>
 
 ## 📄 Resume
