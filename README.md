@@ -43,27 +43,26 @@
 ```dart
 class YassaHalim extends FlutterDeveloper {
 
-  final name       = "Yassa Halim";
-  final title      = "Mobile Engineer";
-  final location   = "Egypt 🇪🇬";
+  final String name     = "Yassa Halim";
+  final String role     = "Mobile Engineer";
+  final String location = "Egypt 🇪🇬";
 
-  final core = [
-    "Flutter", "Dart",
+  List<String> get techStack => [
+    "Flutter", "Dart", "Firebase"
   ];
 
-  final architecture = [
-    "Clean Architecture",
-    "MVVM", "BLoC Pattern",
+  List<String> get architecture => [
+    "Clean Architecture", "MVVM", "BLoC"
   ];
 
-  final passions = [
-    "Pixel-Perfect UI 🎨",
-    "Scalable Systems 🏗️",
-    "Beautiful UX ✨",
-  ];
+  Future<void> buildMasterpiece() async {
+    while (coffeeLevel > 0) {
+      await writeCleanCode();
+      await craftPixelPerfectUI();
+    }
+  }
 
-  String get motto =>
-    "Code is poetry written for humans 📝";
+  String get motto => "Code is poetry written for humans 📝";
 }
 ```
 
@@ -163,6 +162,7 @@ class YassaHalim extends FlutterDeveloper {
 </div>
 
 ## 🛠️ Tech Stack
+
 <div align="center">
   <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
   <img src="https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
@@ -239,13 +239,16 @@ class YassaHalim extends FlutterDeveloper {
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!--                        TOP REPOS SECTION                              -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
+
 ## 🏅 Certificates & Awards
+
 <div align="center">
   <img src="https://img.shields.io/badge/Coursera%20Flutter%20Specialization-00B4D8?style=for-the-badge" alt="Coursera Flutter" />
   <img src="https://img.shields.io/badge/Google%20Associate%20Android%20Developer-00B4D8?style=for-the-badge" alt="Google Android" />
 </div>
 
 ## 📞 Contact
+
 <div align="center">
   <a href="https://github.com/yassa-halim" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://linkedin.com/in/yassa-halim" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -253,7 +256,9 @@ class YassaHalim extends FlutterDeveloper {
 </div>
 
 ## 📄 Resume
+
 [![Resume](https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge)](https://github.com/yassa-halim/yassa-halim/blob/main/Resume.pdf)
+
 ## 🔝 &nbsp;Top Contributed Repos
 
 <div align="center">
@@ -349,3 +354,14 @@ class YassaHalim extends FlutterDeveloper {
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=4000&pause=2000&color=58A6FF&center=true&vCenter=true&width=500&lines=%E2%9C%A8+%22Building+pixel-perfect+experiences%2C+one+widget+at+a+time.%22+%E2%9C%A8" alt="Footer"/>
 </div>
+
+<!--
+ملاحظة: يمكنك استخدام الصور المحلية (stats.svg, top-langs.svg, trophies.svg) التي يتم تحديثها تلقائياً بواسطة GitHub Actions، وذلك بوضعها هكذا:
+
+<div align="center">
+  <img src="stats.svg" width="49%" alt="GitHub Stats"/>
+  <img src="top-langs.svg" width="42%" alt="Top Languages"/>
+  <img src="trophies.svg" width="90%" alt="Trophies"/>
+</div>
+
+-->
