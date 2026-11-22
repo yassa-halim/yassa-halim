@@ -695,86 +695,138 @@
       height: 20px;
     }
 
-    /* Hero Right: Phone Mockup Container (Responsive, No Overflow) */
-    .hero-mockup-wrapper {
+    /* Hero Right: Portrait Photo Visual Container */
+    .hero-visual-wrapper {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
       margin-inline: auto;
-      padding: 1.5rem 0.5rem;
+      padding: 2rem 1rem;
     }
 
-    .phone-mockup {
-      width: min(300px, 84vw);
-      height: 580px;
-      background: #FFFFFF;
-      border-radius: 44px;
-      border: 8px solid #FFFFFF;
-      box-shadow:
-        0 0 0 1.5px rgba(226, 232, 240, 0.8),
-        0 25px 60px -12px rgba(76, 155, 245, 0.22),
-        0 16px 30px -8px rgba(15, 23, 42, 0.08);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
-    }
-
-    .phone-notch {
-      width: 90px;
-      height: 18px;
-      background: #111827;
-      border-radius: 20px;
+    .hero-ambient-glow {
       position: absolute;
-      top: 8px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
+      transform: translate(-50%, -50%);
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 45% 45%, rgba(2, 132, 199, 0.24) 0%, rgba(139, 92, 246, 0.16) 42%, rgba(56, 189, 248, 0.08) 68%, transparent 78%);
+      animation: pulseGlow 6s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 1;
     }
 
-    .phone-screen {
-      flex: 1;
-      background: #F8FAFC;
-      display: flex;
-      flex-direction: column;
-      padding: 2.2rem 1.1rem 1.1rem;
-      gap: 0.85rem;
-      font-size: 0.8rem;
+    @keyframes pulseGlow {
+      0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.8; }
+      100% { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
     }
 
-    .screen-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #E2E8F0;
+    .hero-photo-frame-wrap {
+      position: relative;
+      width: 320px;
+      height: 390px;
+      border-radius: 34px;
+      padding: 5px;
+      background: conic-gradient(from 0deg, #0284C7, #38BDF8, #8B5CF6, #10B981, #F59E0B, #0284C7);
+      box-shadow:
+        0 20px 50px -10px rgba(2, 132, 199, 0.28),
+        0 10px 25px -5px rgba(15, 23, 42, 0.08);
+      z-index: 2;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: rotateRing 14s linear infinite;
     }
-    .screen-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-weight: 700;
-      color: #0F172A;
-      font-size: 0.875rem;
+
+    @keyframes rotateRing {
+      to { filter: hue-rotate(360deg); }
     }
-    .screen-brand-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 6px;
-      background: var(--primary-gradient);
+
+    .hero-photo-frame-wrap:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 28px 65px -10px rgba(2, 132, 199, 0.36),
+        0 14px 30px -5px rgba(15, 23, 42, 0.12);
+    }
+
+    .hero-photo-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 29px;
+      background: #FFFFFF;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
     }
-    .screen-brand-icon svg {
-      width: 14px;
-      height: 14px;
+
+    .hero-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
+
+    .hero-photo-frame-wrap:hover .hero-photo-img {
+      transform: scale(1.05);
+    }
+
+    .hero-photo-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0284C7, #2563EB);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+    }
+
+    .hero-photo-vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.45) 0%, transparent 45%);
+      border-radius: 29px;
+    }
+
+    .hero-photo-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      z-index: 3;
+    }
+
+    .hero-caption-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .hero-caption-role {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #0284C7;
+      font-family: var(--font-mono, monospace);
+    }
+
     .live-status-pill {
       display: flex;
       align-items: center;
@@ -783,9 +835,10 @@
       font-weight: 700;
       color: #059669;
       background: #ECFDF5;
-      padding: 0.2rem 0.5rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 999px;
     }
+
     .pulse-dot {
       width: 6px;
       height: 6px;
@@ -799,126 +852,109 @@
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
-    .mockup-map-card {
-      background: #FFFFFF;
-      border-radius: 16px;
-      padding: 0.85rem;
-      border: 1px solid #E2E8F0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    /* Hero Quick Stats Row */
+    .hero-stats-row {
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.75rem;
     }
-    .mockup-map-svg {
-      width: 100%;
-      height: 95px;
-      border-radius: 10px;
-      background: #F1F5F9;
-      overflow: hidden;
+
+    .hero-stat-box {
+      background: var(--surface-card);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1.25rem;
+      min-width: 110px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
     }
-    .map-telemetry-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+    .hero-stat-box:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.14);
     }
-    .speed-badge {
-      font-size: 1.15rem;
+
+    .hero-stat-number {
+      font-family: var(--font-mono, 'Space Mono', monospace);
+      font-size: 1.45rem;
       font-weight: 800;
-      color: #0284C7;
-    }
-    .telemetry-meta {
-      font-size: 0.68rem;
-      color: #64748B;
+      color: var(--primary-dark);
+      line-height: 1.2;
     }
 
-    .mockup-metric-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.65rem;
-    }
-    .mockup-metric-card {
-      background: #FFFFFF;
-      border-radius: 12px;
-      padding: 0.7rem;
-      border: 1px solid #E2E8F0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    .metric-icon-title {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.68rem;
+    .hero-stat-label {
+      font-size: 0.7rem;
       font-weight: 600;
-      color: #475569;
-    }
-    .metric-val {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #0F172A;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
     }
 
-    .mockup-code-card {
-      background: #0F172A;
-      color: #E2E8F0;
-      border-radius: 12px;
-      padding: 0.75rem;
-      font-family: 'Fira Code', monospace, sans-serif;
-      font-size: 0.66rem;
-      line-height: 1.4;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-heading);
+      border: 1.5px solid var(--border-hairline);
     }
-    .code-comment { color: #64748B; }
-    .code-keyword { color: #38BDF8; font-weight: 600; }
-    .code-method { color: #A78BFA; }
-    .code-param { color: #FCD34D; }
+    .btn-ghost:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      background: rgba(2, 132, 199, 0.05);
+      transform: translateY(-2px);
+    }
 
-    /* Orbiting Satellite Badges (Positioned Safely, No Overflow) */
+    /* Floating Badges */
     .floating-card-badge {
       position: absolute;
-      background: var(--surface-card);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--border-card);
-      box-shadow: var(--shadow-md);
-      border-radius: var(--radius-full);
-      padding: 0.5rem 1rem;
-      display: flex;
+      border-radius: var(--radius-pill);
+      padding: 0.45rem 0.95rem;
+      display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
-      font-size: 0.825rem;
+      gap: 0.5rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: var(--text-heading);
-      z-index: 3;
+      box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.1);
+      z-index: 10;
       white-space: nowrap;
+      pointer-events: auto;
+      transition: var(--transition-smooth);
+    }
+    .floating-card-badge:hover {
+      transform: scale(1.06);
+      box-shadow: 0 14px 30px -4px rgba(2, 132, 199, 0.25);
     }
     .floating-card-badge svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       flex-shrink: 0;
     }
 
     .badge-sat-1 {
       top: 6%;
-      inset-inline-start: -15px;
-      animation: floatBadge1 6s infinite ease-in-out;
-      border-color: rgba(76, 155, 245, 0.4);
+      inset-inline-start: -10px;
+      animation: floatBadge1 5s infinite ease-in-out;
+      border-color: rgba(56, 189, 248, 0.4);
     }
     .badge-sat-2 {
-      top: 48%;
-      inset-inline-end: -20px;
-      animation: floatBadge2 7s infinite ease-in-out;
+      top: 52%;
+      inset-inline-end: -15px;
+      animation: floatBadge2 5.8s infinite ease-in-out;
       border-color: rgba(245, 158, 11, 0.4);
-      background: rgba(255, 255, 255, 0.95);
     }
     .badge-sat-3 {
-      bottom: 6%;
-      inset-inline-start: -10px;
+      bottom: 8%;
+      inset-inline-start: -5px;
       animation: floatBadge3 6.5s infinite ease-in-out;
-      border-color: rgba(184, 169, 255, 0.4);
+      border-color: rgba(139, 92, 246, 0.4);
     }
 
     @keyframes floatBadge1 {
@@ -937,7 +973,7 @@
     @media (max-width: 992px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
       }
       .hero-content {
         align-items: center;
@@ -953,9 +989,18 @@
       .hero-cta-group {
         justify-content: center;
       }
-      .hero-mockup-wrapper {
-        max-width: 320px;
+      .hero-stats-row {
+        justify-content: center;
+      }
+      .hero-visual-wrapper {
+        order: -1;
+        max-width: 340px;
         padding: 1.5rem 0;
+        margin-bottom: 1.5rem;
+      }
+      .hero-photo-frame-wrap {
+        width: 280px;
+        height: 340px;
       }
       .badge-sat-1 {
         top: 2%;
@@ -975,6 +1020,20 @@
       }
     }
 
+    @media (max-width: 480px) {
+      .hero-photo-frame-wrap {
+        width: 240px;
+        height: 290px;
+      }
+      .hero-stat-box {
+        min-width: 95px;
+        padding: 0.6rem 0.9rem;
+      }
+      .hero-stat-number {
+        font-size: 1.25rem;
+      }
+    }
+    
     /* ========================================================================= */
     /* 4. ABOUT SECTION                                                         */
     /* ========================================================================= */
@@ -1123,10 +1182,12 @@
       width: 24px;
       height: 24px;
     }
-    .icon-mobile { background: rgba(76, 155, 245, 0.12); color: #0284C7; }
-    .icon-design { background: rgba(184, 169, 255, 0.2); color: #7C3AED; }
-    .icon-ai { background: rgba(159, 229, 207, 0.25); color: #059669; }
-    .icon-tools { background: rgba(255, 201, 176, 0.25); color: #D97706; }
+    .icon-mobile { background: rgba(2, 132, 199, 0.12); color: #0284C7; }
+    .icon-state { background: rgba(139, 92, 246, 0.15); color: #7C3AED; }
+    .icon-arch { background: rgba(16, 185, 129, 0.15); color: #059669; }
+    .icon-backend { background: rgba(245, 158, 11, 0.15); color: #D97706; }
+    .icon-tools { background: rgba(244, 63, 94, 0.15); color: #E11D48; }
+    .icon-cs { background: rgba(37, 99, 235, 0.15); color: #2563EB; }
 
     .skill-card-title {
       font-size: 1.15rem;
@@ -1926,7 +1987,7 @@
     <!-- ===================================================================== -->
     <!-- 2. HERO SECTION                                                      -->
     <!-- ===================================================================== -->
-    <section class="hero-section" id="hero">
+        <section class="hero-section" id="hero">
       <div class="container hero-grid">
         <!-- Hero Left / Content -->
         <div class="hero-content reveal active">
@@ -1946,7 +2007,7 @@
 
           <!-- Stable Rotating Subtitle Container (No layout shift) -->
           <div class="hero-subtitle-wrapper" aria-live="polite">
-            <span class="typing-text" id="typingSubtitle">Flutter Developer</span>
+            <span class="typing-text" id="typingSubtitle">Flutter Mobile Developer</span>
             <span class="typing-cursor" aria-hidden="true"></span>
           </div>
 
@@ -1955,20 +2016,44 @@
           </p>
 
           <div class="hero-cta-group">
-            <a href="#projects" class="btn btn-primary">
+            <a href="#contact" class="btn btn-primary">
+              <span data-i18n="hero.hireMe">Hire Me</span>
+              <svg class="icon-flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="heroCvBtn">
+              <span data-i18n="hero.downloadCv">Download CV</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <a href="#projects" class="btn btn-ghost">
               <span data-i18n="hero.viewProjects">View Projects</span>
               <svg class="icon-flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary">
-              <span data-i18n="hero.contactMe">Get In Touch</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
+          </div>
+
+          <!-- Hero Quick Stats Row -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-box">
+              <div class="hero-stat-number" data-i18n="hero.statProjects">8+</div>
+              <div class="hero-stat-label" data-i18n="hero.statProjectsSub">Projects Built</div>
+            </div>
+            <div class="hero-stat-box">
+              <div class="hero-stat-number" data-i18n="hero.statExp">2+</div>
+              <div class="hero-stat-label" data-i18n="hero.statExpSub">Years Experience</div>
+            </div>
+            <div class="hero-stat-box">
+              <div class="hero-stat-number" data-i18n="hero.statAwards">3+</div>
+              <div class="hero-stat-label" data-i18n="hero.statAwardsSub">Awards & Certs</div>
+            </div>
           </div>
 
           <!-- Socials Row -->
@@ -1983,6 +2068,11 @@
                 <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.85a1.46 1.46 0 1 0 0 2.92 1.46 1.46 0 0 0 0-2.92z"/>
               </svg>
             </a>
+            <a href="https://wa.me/201207263881" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp Contact">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.36 7.35 9.09 7.41 8.86 7.65C8.63 7.89 8 8.48 8 9.68C8 10.89 8.88 12.06 9 12.22C9.13 12.38 10.73 14.85 13.18 15.91C13.76 16.16 14.21 16.31 14.57 16.42C15.15 16.61 15.68 16.58 16.1 16.52C16.57 16.45 17.55 15.93 17.75 15.35C17.96 14.77 17.96 14.28 17.9 14.17C17.83 14.07 17.67 14.01 17.43 13.89C17.2 13.77 16.03 13.2 15.81 13.12C15.6 13.04 15.44 13 15.28 13.24C15.12 13.48 14.67 14.01 14.53 14.17C14.39 14.33 14.25 14.35 14.01 14.23C13.78 14.11 13.02 13.86 12.13 13.07C11.44 12.45 10.97 11.69 10.83 11.46C10.7 11.22 10.82 11.09 10.94 10.97C11.05 10.86 11.18 10.68 11.3 10.54C11.42 10.4 11.46 10.3 11.54 10.14C11.62 9.98 11.58 9.84 11.52 9.72C11.46 9.6 11 8.47 10.8 8C10.61 7.54 10.42 7.6 10.27 7.6L9.82 7.6C9.65 7.6 9.53 7.35 9.53 7.35Z"/>
+              </svg>
+            </a>
             <a href="mailto:yassahalim18@gmail.com" class="social-btn" aria-label="Send Email">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -1991,8 +2081,10 @@
           </div>
         </div>
 
-        <!-- Hero Right: Responsive Smartphone Mockup & Badges -->
-        <div class="hero-mockup-wrapper reveal">
+        <!-- Hero Right: Responsive Photo Frame & Floating Badges -->
+        <div class="hero-visual-wrapper reveal">
+          <div class="hero-ambient-glow" aria-hidden="true"></div>
+
           <div class="floating-card-badge badge-sat-1">
             <svg viewBox="0 0 24 24" fill="#0284C7" aria-hidden="true">
               <path d="M14.314 0L2.3 12 6 15.7 21.686 0H14.314zm-.014 11.071L7.543 17.829 11.243 21.53 21.686 11.071H14.3z"/>
@@ -2011,81 +2103,27 @@
             <svg viewBox="0 0 24 24" fill="#7C3AED" aria-hidden="true">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/>
             </svg>
-            <span data-i18n="hero.floatTag3">AI Agent Workflows ⚡</span>
+            <span data-i18n="hero.floatTag3">Clean Arch & BLoC ⚡</span>
           </div>
 
-          <!-- Modern Smartphone Mockup -->
-          <div class="phone-mockup" aria-hidden="true">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="screen-header">
-                <div class="screen-brand">
-                  <div class="screen-brand-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M14.3 0L2.3 12 6 15.7 21.7 0H14.3zm0 11.1L7.5 17.8 11.2 21.5 21.7 11.1H14.3z"/>
-                    </svg>
-                  </div>
-                  <span data-i18n="hero.mockupTitle">Arabeety GPS</span>
+          <!-- Modern Curved Photo Frame with Soft Glow & Rotating Conic Ring -->
+          <div class="hero-photo-frame-wrap">
+            <div class="hero-photo-inner">
+              <img src="assets/me.jpg" alt="Yassa Halim - Flutter Mobile Developer" class="hero-photo-img" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
+              <div id="photoFallback" class="hero-photo-fallback" style="display:none;">
+                <span style="font-size: 3rem; font-weight: 800; font-family: 'Space Mono', monospace;">YH</span>
+                <span style="font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem;">Flutter Developer</span>
+              </div>
+              <div class="hero-photo-vignette" aria-hidden="true"></div>
+              <div class="hero-photo-caption">
+                <div>
+                  <div class="hero-caption-name" data-i18n="hero.name">Yassa Halim</div>
+                  <div class="hero-caption-role">Flutter Mobile Engineer</div>
                 </div>
                 <div class="live-status-pill">
                   <span class="pulse-dot"></span>
-                  <span data-i18n="hero.mockupLive">LIVE</span>
+                  <span data-i18n="hero.statusActive">Active</span>
                 </div>
-              </div>
-
-              <!-- Map & Telemetry Visual -->
-              <div class="mockup-map-card">
-                <div class="mockup-map-svg">
-                  <svg viewBox="0 0 250 100" width="100%" height="100%" preserveAspectRatio="none">
-                    <rect width="250" height="100" fill="#E2E8F0"/>
-                    <path d="M-10 30 Q 80 40 140 20 T 260 50" stroke="#CBD5E1" stroke-width="12" fill="none"/>
-                    <path d="M30 110 Q 90 60 180 80 T 260 20" stroke="#CBD5E1" stroke-width="10" fill="none"/>
-                    <path d="M20 75 Q 80 25 150 45 T 230 35" stroke="#38BDF8" stroke-width="4" stroke-dasharray="6,4" fill="none"/>
-                    <circle cx="20" cy="75" r="4" fill="#2563EB"/>
-                    <g transform="translate(150, 45)">
-                      <circle cx="0" cy="0" r="9" fill="#0284C7" fill-opacity="0.3"/>
-                      <circle cx="0" cy="0" r="5" fill="#0284C7"/>
-                    </g>
-                  </svg>
-                </div>
-                <div class="map-telemetry-row">
-                  <div>
-                    <div class="speed-badge" data-i18n="hero.mockupSpeed">78 km/h</div>
-                    <div class="telemetry-meta" data-i18n="hero.mockupStatus">Engine Normal • Live Route</div>
-                  </div>
-                  <div style="text-align:end;">
-                    <div style="font-weight:700; color:#059669;" data-i18n="hero.mockupBattery">94% Battery</div>
-                    <div class="telemetry-meta" data-i18n="hero.mockupBle">BLE 5.2 Connected</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Metric Grid -->
-              <div class="mockup-metric-grid">
-                <div class="mockup-metric-card">
-                  <div class="metric-icon-title">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#0284C7"><circle cx="12" cy="12" r="10"/></svg>
-                    <span data-i18n="hero.mockupArchLabel">Architecture</span>
-                  </div>
-                  <div class="metric-val" data-i18n="hero.mockupCleanArch">Clean Architecture</div>
-                </div>
-                <div class="mockup-metric-card">
-                  <div class="metric-icon-title">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#10B981"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    <span data-i18n="hero.mockupFpsLabel">Smooth FPS</span>
-                  </div>
-                  <div class="metric-val" data-i18n="hero.mockupSmoothUI">60 FPS Smooth UI</div>
-                </div>
-              </div>
-
-              <!-- Flutter Code Snippet -->
-              <div class="mockup-code-card">
-                <span class="code-comment">// Clean Reactive State</span>
-                <div><span class="code-keyword">final</span> state = <span class="code-method">BlocProvider</span>.of(ctx);</div>
-                <div><span class="code-keyword">return</span> <span class="code-method">AnimatedBuilder</span>(</div>
-                <div style="padding-inline-start: 8px;"><span class="code-param">animation:</span> controller,</div>
-                <div style="padding-inline-start: 8px;"><span class="code-param">builder:</span> (ctx, child) =&gt; ...</div>
-                <div>);</div>
               </div>
             </div>
           </div>
@@ -2172,7 +2210,7 @@
     <!-- ===================================================================== -->
     <!-- 4. SKILLS SECTION                                                        -->
     <!-- ===================================================================== -->
-    <section class="section-spacing" id="skills">
+        <section class="section-spacing" id="skills">
       <div class="container">
         <div class="header-center reveal">
           <div class="section-badge">
@@ -2185,7 +2223,7 @@
         </div>
 
         <div class="skills-grid">
-          <!-- Mobile -->
+          <!-- 1. Mobile Development -->
           <div class="skill-category-card reveal">
             <div class="skill-card-header">
               <div class="skill-header-icon icon-mobile">
@@ -2196,79 +2234,102 @@
               </div>
               <div>
                 <h3 class="skill-card-title" data-i18n="skills.catMobile">Mobile Development</h3>
-                <p class="skill-card-desc" data-i18n="skills.catMobileDesc">End-to-end mobile engineering with state-of-the-art Flutter toolchains.</p>
+                <p class="skill-card-desc" data-i18n="skills.catMobileDesc">End-to-end mobile engineering with state-of-the-art Flutter & Dart toolchains.</p>
               </div>
             </div>
             <div class="skill-chips">
-              <span class="skill-chip featured">⚡ Flutter</span>
+              <span class="skill-chip featured">⚡ Flutter 3.x</span>
               <span class="skill-chip featured">🎯 Dart</span>
-              <span class="skill-chip">BLoC / Cubit</span>
-              <span class="skill-chip">Riverpod</span>
-              <span class="skill-chip">Clean Architecture</span>
-              <span class="skill-chip">MVVM</span>
-              <span class="skill-chip">RESTful APIs</span>
-              <span class="skill-chip">Firebase</span>
-              <span class="skill-chip">Local DB (Hive / SQLite)</span>
-              <span class="skill-chip">App Store & Play Store</span>
+              <span class="skill-chip">Android Native (Kotlin)</span>
+              <span class="skill-chip">iOS Deployment</span>
+              <span class="skill-chip">Responsive UI</span>
+              <span class="skill-chip">Platform Channels</span>
+              <span class="skill-chip">Custom Painters</span>
+              <span class="skill-chip">Flutter Slivers</span>
             </div>
           </div>
 
-          <!-- UI/UX -->
+          <!-- 2. State Management -->
           <div class="skill-category-card reveal">
             <div class="skill-card-header">
-              <div class="skill-header-icon icon-design">
+              <div class="skill-header-icon icon-state">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                  <circle cx="11" cy="11" r="2"/>
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
                 </svg>
               </div>
               <div>
-                <h3 class="skill-card-title" data-i18n="skills.catDesign">UI/UX & Design</h3>
-                <p class="skill-card-desc" data-i18n="skills.catDesignDesc">Creating intuitive design systems, wireframes, and production-ready interfaces.</p>
+                <h3 class="skill-card-title" data-i18n="skills.catState">State Management</h3>
+                <p class="skill-card-desc" data-i18n="skills.catStateDesc">Predictable, unidirectional reactive architectures for enterprise-scale Flutter apps.</p>
               </div>
             </div>
             <div class="skill-chips">
-              <span class="skill-chip featured">🎨 UI/UX Design</span>
-              <span class="skill-chip featured">❖ Figma</span>
-              <span class="skill-chip">Design Systems</span>
-              <span class="skill-chip">Material Design 3</span>
-              <span class="skill-chip">Interactive Prototyping</span>
-              <span class="skill-chip">Wireframing</span>
-              <span class="skill-chip">Responsive Layouts</span>
-              <span class="skill-chip">Micro-interactions</span>
-              <span class="skill-chip">Design Tokens</span>
+              <span class="skill-chip featured">🔄 BLoC & Cubit</span>
+              <span class="skill-chip featured">🌊 Riverpod</span>
+              <span class="skill-chip">Provider</span>
+              <span class="skill-chip">GetX</span>
+              <span class="skill-chip">Reactive Streams</span>
+              <span class="skill-chip">RxDart</span>
+              <span class="skill-chip">Hydrated BLoC</span>
             </div>
           </div>
 
-          <!-- AI & Big Data -->
+          <!-- 3. Architecture & Patterns -->
           <div class="skill-category-card reveal">
             <div class="skill-card-header">
-              <div class="skill-header-icon icon-ai">
+              <div class="skill-header-icon icon-arch">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/>
-                  <path d="M16 11a5 5 0 0 1-8 0"/>
-                  <rect x="3" y="14" width="18" height="8" rx="2"/>
+                  <path d="M3 21h18"/>
+                  <path d="M5 21V7l8-4v18"/>
+                  <path d="M19 21V11l-6-4"/>
+                  <path d="M9 9h1"/>
+                  <path d="M9 13h1"/>
+                  <path d="M9 17h1"/>
                 </svg>
               </div>
               <div>
-                <h3 class="skill-card-title" data-i18n="skills.catAi">AI, Automation & Data</h3>
-                <p class="skill-card-desc" data-i18n="skills.catAiDesc">Integrating smart autonomous agents, LLM tooling, and big data workflows.</p>
+                <h3 class="skill-card-title" data-i18n="skills.catArch">Architecture & Patterns</h3>
+                <p class="skill-card-desc" data-i18n="skills.catArchDesc">Separation of concerns with Clean Architecture, SOLID, and test-driven development.</p>
               </div>
             </div>
             <div class="skill-chips">
-              <span class="skill-chip featured">🤖 AI Fundamentals</span>
-              <span class="skill-chip featured">📊 Big Data</span>
-              <span class="skill-chip">n8n Automation</span>
-              <span class="skill-chip">Telegram Bot API</span>
-              <span class="skill-chip">LLM Agents</span>
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">Data Pipelines</span>
-              <span class="skill-chip">API Integrations</span>
+              <span class="skill-chip featured">🏛️ Clean Architecture</span>
+              <span class="skill-chip featured">📐 MVVM Pattern</span>
+              <span class="skill-chip">Repository Pattern</span>
+              <span class="skill-chip">SOLID Principles</span>
+              <span class="skill-chip">Dependency Injection (GetIt)</span>
+              <span class="skill-chip">TDD & Unit Testing</span>
+              <span class="skill-chip">Widget Testing</span>
             </div>
           </div>
 
-          <!-- Tools -->
+          <!-- 4. Backend & APIs -->
+          <div class="skill-category-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-header-icon icon-backend">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-card-title" data-i18n="skills.catBackend">Backend & Cloud APIs</h3>
+                <p class="skill-card-desc" data-i18n="skills.catBackendDesc">RESTful APIs, Dio, Firebase Auth & Firestore, WebSockets, and real-time synchronization.</p>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip featured">🌐 RESTful APIs</span>
+              <span class="skill-chip featured">🚀 Dio & Http</span>
+              <span class="skill-chip">Firebase Authentication</span>
+              <span class="skill-chip">Cloud Firestore</span>
+              <span class="skill-chip">Push Notifications (FCM)</span>
+              <span class="skill-chip">WebSockets</span>
+              <span class="skill-chip">Supabase</span>
+              <span class="skill-chip">JSON Serialization</span>
+            </div>
+          </div>
+
+          <!-- 5. Tools & DevOps -->
           <div class="skill-category-card reveal">
             <div class="skill-card-header">
               <div class="skill-header-icon icon-tools">
@@ -2277,19 +2338,53 @@
                 </svg>
               </div>
               <div>
-                <h3 class="skill-card-title" data-i18n="skills.catTools">Engineering & Tools</h3>
-                <p class="skill-card-desc" data-i18n="skills.catToolsDesc">Version control, automated pipelines, testing, and industry developer tooling.</p>
+                <h3 class="skill-card-title" data-i18n="skills.catTools">Tools & DevOps</h3>
+                <p class="skill-card-desc" data-i18n="skills.catToolsDesc">Git, GitHub Actions CI/CD, Fastlane, Flutter DevTools, and App Store / Google Play publishing.</p>
               </div>
             </div>
             <div class="skill-chips">
-              <span class="skill-chip featured">🐙 Git</span>
-              <span class="skill-chip featured">📦 GitHub</span>
-              <span class="skill-chip">Android Studio</span>
-              <span class="skill-chip">VS Code</span>
-              <span class="skill-chip">Postman</span>
-              <span class="skill-chip">CI/CD Workflows</span>
-              <span class="skill-chip">Debugging & Profiling</span>
-              <span class="skill-chip">Clean Code / SOLID</span>
+              <span class="skill-chip featured">🐙 Git & GitHub</span>
+              <span class="skill-chip featured">⚙️ GitHub Actions CI/CD</span>
+              <span class="skill-chip">Fastlane Automation</span>
+              <span class="skill-chip">Flutter DevTools</span>
+              <span class="skill-chip">Figma to Flutter</span>
+              <span class="skill-chip">Postman API Testing</span>
+              <span class="skill-chip">Google Play Console</span>
+              <span class="skill-chip">TestFlight</span>
+            </div>
+          </div>
+
+          <!-- 6. Core Computer Science -->
+          <div class="skill-category-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-header-icon icon-cs">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <line x1="9" y1="1" x2="9" y2="4"/>
+                  <line x1="15" y1="1" x2="15" y2="4"/>
+                  <line x1="9" y1="20" x2="9" y2="23"/>
+                  <line x1="15" y1="20" x2="15" y2="23"/>
+                  <line x1="20" y1="9" x2="23" y2="9"/>
+                  <line x1="20" y1="14" x2="23" y2="14"/>
+                  <line x1="1" y1="9" x2="4" y2="9"/>
+                  <line x1="1" y1="14" x2="4" y2="14"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-card-title" data-i18n="skills.catCS">Core Computer Science</h3>
+                <p class="skill-card-desc" data-i18n="skills.catCSDesc">Data structures, algorithms, object-oriented design, SQLite databases, and complexity optimization.</p>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip featured">🧠 Data Structures</span>
+              <span class="skill-chip featured">⚡ Algorithms</span>
+              <span class="skill-chip">OOP Principles</span>
+              <span class="skill-chip">SQLite & Hive Local DB</span>
+              <span class="skill-chip">Big-O Complexity</span>
+              <span class="skill-chip">Design Patterns</span>
+              <span class="skill-chip">Problem Solving</span>
+              <span class="skill-chip">Clean Code Standards</span>
             </div>
           </div>
         </div>
@@ -2531,6 +2626,25 @@
         <div class="timeline-wrapper">
           <div class="timeline-line"></div>
           <div class="timeline-items">
+            <div class="timeline-item reveal">
+              <div class="timeline-marker" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="timeline-content-card">
+                <div class="timeline-meta-row">
+                  <span class="timeline-institution" data-i18n="education.item0School">Faculty of Computers & Information</span>
+                  <span class="timeline-date-badge" data-i18n="education.item0Date">Bachelor of Science Degree</span>
+                </div>
+                <h3 class="timeline-degree" data-i18n="education.item0Degree">B.Sc. in Computer Science</h3>
+                <p class="timeline-body-text" data-i18n="education.item0Desc">
+                  Comprehensive academic curriculum covering software engineering, mobile systems, advanced data structures, algorithmic design, relational database management, and distributed systems architecture.
+                </p>
+              </div>
+            </div>
+
             <div class="timeline-item reveal">
               <div class="timeline-marker" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2862,13 +2976,14 @@
     /* ===================================================================== */
     /* EDIT HERE: PERSONAL DATA & BILINGUAL TRANSLATIONS                     */
     /* ===================================================================== */
-    const PORTFOLIO_DATA = {
+        const PORTFOLIO_DATA = {
       profile: {
         name: "Yassa Halim",
         nameAr: "ياسا حليم",
         email: "yassahalim18@gmail.com",
         github: "https://github.com/yassa-halim",
-        linkedin: "https://www.linkedin.com/in/yassa-halim/"
+        linkedin: "https://www.linkedin.com/in/yassa-halim/",
+        whatsapp: "https://wa.me/201207263881"
       },
       translations: {
         en: {
@@ -2885,23 +3000,27 @@
             badgeStatus: "Available for projects",
             greeting: "Hello, I'm",
             name: "Yassa Halim",
-            titles: ["Flutter Developer", "UI/UX Enthusiast", "AI & Big Data Learner"],
+            titles: [
+              "Flutter Mobile Developer",
+              "Cross-Platform Mobile Architect",
+              "Clean Architecture & BLoC Specialist",
+              "AI-Powered Mobile Engineer"
+            ],
             intro: "Crafting fluid, high-performance cross-platform mobile apps with clean architecture, pixel-perfect interfaces, and modern AI automation.",
+            hireMe: "Hire Me",
+            downloadCv: "Download CV",
             viewProjects: "View Projects",
             contactMe: "Get In Touch",
+            statProjects: "8+",
+            statProjectsSub: "Projects Built",
+            statExp: "2+",
+            statExpSub: "Years Experience",
+            statAwards: "3+",
+            statAwardsSub: "Awards & Certs",
+            statusActive: "Active",
             floatTag1: "Flutter 3.x & Dart",
             floatTag2: "Huawei 3rd Prize 🏆",
-            floatTag3: "AI Agent Workflows ⚡",
-            mockupTitle: "Arabeety GPS",
-            mockupLive: "LIVE",
-            mockupSpeed: "78 km/h",
-            mockupStatus: "Engine Normal • Live Route",
-            mockupBattery: "94% Battery",
-            mockupBle: "BLE 5.2 Connected",
-            mockupArchLabel: "Architecture",
-            mockupFpsLabel: "Smooth FPS",
-            mockupCleanArch: "Clean Architecture",
-            mockupSmoothUI: "60 FPS Smooth UI"
+            floatTag3: "Clean Arch & BLoC ⚡"
           },
           about: {
             tag: "About Me",
@@ -2909,9 +3028,9 @@
             bioP1: "I'm a dedicated Flutter Mobile Engineer based in Egypt with a strong background in software engineering, UI/UX design, and AI automation. I specialize in building responsive, scalable, and visually refined mobile applications for iOS and Android.",
             bioP2: "My approach combines strict Clean Architecture principles (BLoC/Riverpod, MVVM, SOLID) with an obsession for micro-interactions and smooth user journeys. When I'm not crafting widgets, I explore AI agents, big data pipelines, and workflow automations to solve real-world problems.",
             statEdu: "Education & Certs",
-            statEduVal: "Route Diploma & NTI",
+            statEduVal: "B.Sc. CS & Route Diploma",
             statFocus: "Primary Focus",
-            statFocusVal: "Flutter, BLoC, UI/UX",
+            statFocusVal: "Flutter, BLoC, Clean Arch",
             statLang: "Languages",
             statLangVal: "Arabic (Native) • English (Fluent)",
             statArch: "Philosophy",
@@ -2921,13 +3040,17 @@
             tag: "Technical Arsenal",
             title: "Tools, technologies & methodologies I work with",
             catMobile: "Mobile Development",
-            catMobileDesc: "End-to-end mobile engineering with state-of-the-art Flutter toolchains.",
-            catDesign: "UI/UX & Design",
-            catDesignDesc: "Creating intuitive design systems, wireframes, and production-ready interfaces.",
-            catAi: "AI, Automation & Data",
-            catAiDesc: "Integrating smart autonomous agents, LLM tooling, and big data workflows.",
-            catTools: "Engineering & Tools",
-            catToolsDesc: "Version control, automated pipelines, testing, and industry developer tooling."
+            catMobileDesc: "End-to-end mobile engineering with state-of-the-art Flutter & Dart toolchains.",
+            catState: "State Management",
+            catStateDesc: "Predictable, unidirectional reactive architectures for enterprise-scale Flutter apps.",
+            catArch: "Architecture & Patterns",
+            catArchDesc: "Separation of concerns with Clean Architecture, SOLID, and test-driven development.",
+            catBackend: "Backend & Cloud APIs",
+            catBackendDesc: "RESTful APIs, Dio, Firebase Auth & Firestore, WebSockets, and real-time synchronization.",
+            catTools: "Tools & DevOps",
+            catToolsDesc: "Git, GitHub Actions CI/CD, Fastlane, Flutter DevTools, and App Store / Google Play publishing.",
+            catCS: "Core Computer Science",
+            catCSDesc: "Data structures, algorithms, object-oriented design, SQLite databases, and complexity optimization."
           },
           projects: {
             tag: "Featured Work",
@@ -2955,6 +3078,10 @@
           education: {
             tag: "Academic Journey",
             title: "Education, specialized training & certifications",
+            item0School: "Faculty of Computers & Information",
+            item0Date: "Bachelor of Science Degree",
+            item0Degree: "B.Sc. in Computer Science",
+            item0Desc: "Comprehensive academic curriculum covering software engineering, mobile systems, advanced data structures, algorithmic design, relational database management, and distributed systems architecture.",
             item1School: "Route Academy",
             item1Date: "Comprehensive Professional Program",
             item1Degree: "Flutter Development Diploma",
@@ -3024,23 +3151,27 @@
             badgeStatus: "متاح للمشاريع والعمل",
             greeting: "مرحباً، أنا",
             name: "ياسا حليم",
-            titles: ["مطوّر تطبيقات فلاتر", "مهتم بتصميم واجهات UI/UX", "متعلم في الذكاء الاصطناعي والبيانات"],
+            titles: [
+              "مطوّر تطبيقات فلاتر (Flutter Developer)",
+              "مهندس معماريات تطبيقات الجوال",
+              "متخصص بنية Clean Architecture و BLoC",
+              "مهندس تطبيقات مدعومة بالذكاء الاصطناعي"
+            ],
             intro: "أبني تطبيقات موبايل عالية الأداء وسلسة لمنصتي iOS و Android بكود نظيف، بنية برمجية محكمة، واجهات فائقة الدقة، وأحدث أدوات الأتمتة بالذكاء الاصطناعي.",
+            hireMe: "وظّفني",
+            downloadCv: "تحميل السيرة الذاتية",
             viewProjects: "استعراض المشاريع",
             contactMe: "تواصل معي",
+            statProjects: "+٨",
+            statProjectsSub: "مشاريع منجزة",
+            statExp: "+٢",
+            statExpSub: "سنوات خبرة",
+            statAwards: "+٣",
+            statAwardsSub: "شهادات وجوائز",
+            statusActive: "نشط حالياً",
             floatTag1: "Flutter 3.x & Dart",
             floatTag2: "جائزة هواوي الإقليمية 🏆",
-            floatTag3: "وكلاء ذكاء اصطناعي وأتمتة ⚡",
-            mockupTitle: "عربيتي GPS",
-            mockupLive: "مباشر",
-            mockupSpeed: "78 كم/س",
-            mockupStatus: "المحرك بحالة ممتازة • مسار حي",
-            mockupBattery: "٩٤٪ البطارية",
-            mockupBle: "متصل BLE 5.2",
-            mockupArchLabel: "الهندسة البرمجية",
-            mockupFpsLabel: "سلاسة العرض",
-            mockupCleanArch: "كود منظم Clean Arch",
-            mockupSmoothUI: "٦٠ إطار/ث فائقة السلاسة"
+            floatTag3: "بنية كود نظيفة BLoC ⚡"
           },
           about: {
             tag: "نبذة عني",
@@ -3048,9 +3179,9 @@
             bioP1: "أنا مهندس برمجيات ومطوّر تطبيقات Flutter مقيم في مصر، أمتلك خلفية قوية في هندسة التطبيقات، تصميم تجربة وواجهة المستخدم UI/UX، وتقنيات الذكاء الاصطناعي والأتمتة. أتخصص في بناء تطبيقات هجينة متجاوبة، سريعة، وعصرية لأجهزة الآيفون والأندرويد.",
             bioP2: "يقوم أسلوبي البرمجي على تطبيق معايير Clean Architecture الصارمة وإدارة الحالة المتقدمة (BLoC / Riverpod) مع اهتمام فائق بأدق التفاصيل البصرية وتجربة المستخدم. إلى جانب تطوير التطبيقات، أستكشف أتمتة الوكلاء الأذكياء ومعالجة البيانات لحل المشكلات الواقعية بكفاءة.",
             statEdu: "التعليم والشهادات",
-            statEduVal: "دبلومة Route & تدريب NTI",
+            statEduVal: "بكالوريوس حاسبات & دبلومة Route",
             statFocus: "التركيز الأساسي",
-            statFocusVal: "Flutter, BLoC, UI/UX",
+            statFocusVal: "Flutter, BLoC, Clean Arch",
             statLang: "اللغات",
             statLangVal: "العربية (اللغة الأم) • الإنجليزية (طلاقة)",
             statArch: "المبدأ البرمجي",
@@ -3060,13 +3191,17 @@
             tag: "الترسانة التقنية",
             title: "الأدوات والتقنيات والمناهج التي أتقنها",
             catMobile: "تطوير تطبيقات الموبايل",
-            catMobileDesc: "تطوير شامل وشديد الكفاءة باستخدام أحدث منظومات فلاتر ودارت.",
-            catDesign: "تصميم واجهات وتجربة المستخدم UI/UX",
-            catDesignDesc: "بناء أنظمة التصميم، المخططات الهيكلية، والواجهات التفاعلية الجاهزة للإنتاج.",
-            catAi: "الذكاء الاصطناعي والأتمتة والبيانات",
-            catAiDesc: "دمج الوكلاء الأذكياء المستقلين، أدوات LLM، وأتمتة تدفقات العمل والبيانات.",
+            catMobileDesc: "تطوير شامل وشديد الكفاءة باستخدام أحدث منظومات فلاتر ودارت لمنصتي iOS و Android.",
+            catState: "إدارة الحالة (State Management)",
+            catStateDesc: "معماريات تفاعلية واضحة ومستقرة لإدارة تدفق البيانات وتطبيقات فلاتر الضخمة.",
+            catArch: "المعمارية والأنماط البرمجية",
+            catArchDesc: "فصل المسؤوليات بالاعتماد على Clean Architecture ومبادئ SOLID والاختبارات البرمجية.",
+            catBackend: "الخوادم والسحابة وواجهات REST",
+            catBackendDesc: "واجهات برمجة التطبيقات RESTful، مكتبة Dio، خدمات فايربيس والمزامنة الحية.",
             catTools: "أدوات الهندسة والعمل البرمجي",
-            catToolsDesc: "أنظمة التحكم بالإصدارات، الأتمتة المستمرة CI/CD، والاختبارات البرمجية."
+            catToolsDesc: "أنظمة Git، الأتمتة المستمرة عبر GitHub Actions، أدوات DevTools، والنشر للمتاجر.",
+            catCS: "علوم الحاسب الأساسية",
+            catCSDesc: "هياكل البيانات، الخوارزميات، البرمجة كائنية التوجه OOP، وقواعد بيانات SQLite."
           },
           projects: {
             tag: "أبرز الأعمال",
@@ -3094,6 +3229,10 @@
           education: {
             tag: "المسيرة الأكاديمية",
             title: "التعليم والتدريب التخصصي والشهادات المهنية",
+            item0School: "كلية الحاسبات والمعلومات",
+            item0Date: "درجة البكالوريوس الجامعية",
+            item0Degree: "بكالوريوس علوم الحاسب (B.Sc. in Computer Science)",
+            item0Desc: "منهج أكاديمي شامل يغطي هندسة البرمجيات، معماريات تطبيقات الجوال، هياكل البيانات المتقدمة، تحليل وتصميم الخوارزميات، ونظم قواعد البيانات.",
             item1School: "أكاديمية Route",
             item1Date: "برنامج تدريبي مهني متقدم",
             item1Degree: "دبلومة تطوير تطبيقات الموبايل بـ Flutter",
